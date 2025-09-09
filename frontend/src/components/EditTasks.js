@@ -17,11 +17,12 @@ function EditTasks() {
                 const res = await axios.get(`http://localhost:8000/tasks/${id}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
-                setTitle(res.data.title);
-                setDescription(res.data.description);
-                setCompleted(res.data.completed);
+                setTitle(res.data.task.title);
+                setDescription(res.data.task.description);
+                setCompleted(res.data.task.completed);
             } catch (err) {
                 setMessage('Failed to fetch task');
+                console.error(err);
             }
         };
         fetchTask();
@@ -66,7 +67,7 @@ function EditTasks() {
             <div>
                 <input
                     type="text"
-                    value={title}
+                    value= {title}
                     onChange={e => setTitle(e.target.value)}
                     required
                 />
@@ -91,7 +92,7 @@ function EditTasks() {
                 <button type="submit">Update Task</button>
             </div>
             <div>
-                <button type="button" onClick={handleDelete}>Delete Task</button>
+                <button type="button" id="delete-button" onClick={handleDelete}>Delete Task</button>
             </div>
             <div>{message}</div>
         </form>

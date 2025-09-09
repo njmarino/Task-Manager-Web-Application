@@ -95,6 +95,51 @@ button[type="submit"]:hover {
   color: #232946;
 }
 
+button[type="button"] {
+  background: #70719f;
+  color: #f5f6fa;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  justify-content: center;
+}
+
+button[type="button"]:hover {
+  background: #5a5b8a;
+  color: #f5f6fa;
+}
+
+#delete-button {
+  background: #c91c1c;
+  color: #f5f6fa;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+#delete-button:hover {
+  background: #a51414;
+  color: #f5f6fa;
+}
+
+a {
+  color: #ffd803;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 h1,h2 {
   text-align: center;
 }
